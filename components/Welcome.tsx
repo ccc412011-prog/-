@@ -120,4 +120,31 @@ const Welcome: React.FC<WelcomeProps> = ({ onAdopt }) => {
   }
 
   return (
-    <div className="h-screen w-full flex flex-col p-8 animate-fade-
+    <div className="h-screen w-full flex flex-col p-8 animate-fade-in items-center justify-center">
+      <div className="mb-12">
+        <CatAvatar status="idle" weight={4.0} breed={selectedBreed} size="lg" />
+      </div>
+      <h1 className="text-2xl font-cartoon text-gray-700 mb-2">给它起个好听的名字</h1>
+      <p className="text-gray-400 text-xs text-center mb-12">它会伴你走过每一公里的汗水</p>
+
+      <div className="bg-white p-8 rounded-[3rem] shadow-sm border border-orange-50 w-full mb-12">
+        <input 
+          type="text" 
+          value={catName}
+          onChange={e => setCatName(e.target.value)}
+          className="w-full bg-transparent text-center text-3xl font-bold text-gray-700 outline-none"
+          autoFocus
+        />
+      </div>
+
+      <button 
+        onClick={() => onAdopt(catName, selectedBreed)}
+        className="w-full py-5 bg-orange-400 text-white rounded-[2.5rem] text-xl font-bold shadow-lg shadow-orange-100 btn-squish"
+      >
+        开启领养生活 🚀
+      </button>
+    </div>
+  );
+};
+
+export default Welcome;
