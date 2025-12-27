@@ -1,0 +1,7 @@
+{
+  "name": "MiaoMotion",
+  "description": "A healing cat-raising and outdoor sports recommendation app. Check-in to feed your cat and stay healthy!",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
